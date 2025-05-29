@@ -11,7 +11,10 @@ public class Main {
         int opcionesMenu = 0;
         int factorial = 0;
         long sumaDigitos = 0;
-        
+        int limiteInferiorPrimos = 0;
+        int limiteSuperiorPrimos = 0;
+        double mayorMenor = 0;
+        boolean bucleDeErrores = false;
 
         do{
             try{
@@ -21,25 +24,35 @@ public class Main {
 
             }catch(IOException e){
                 System.out.println("Error al leer la entrada: ");
+                continue;
             }
             catch(NumberFormatException e){
                 System.out.println("Error en el formato de entrada");
+                continue; 
             }
 
-            switch (opcionesMenu){
+            
+        
+            switch (opcionesMenu){     
                 case 1:
-                    System.out.println("Digite el numero al que desea calcular el factorial: ");
-                    try{
-                        factorial = Integer.parseInt(bufer.readLine());
+                    do{
+                         System.out.println("Digite el numero al que desea calcular el factorial: ");
+                        try{
+                            factorial = Integer.parseInt(bufer.readLine());
 
-                    }
-                    catch(IOException e){
-                        System.out.println("error al leer la entrada");
-                    }
-                    catch(NumberFormatException e){
-                     System.out.println("Error en el formato de entrada");
-                    }
-
+                        }
+                        catch(IOException e){
+                            System.out.println("error al leer la entrada");
+                            continue;
+                            
+                        }
+                        catch(NumberFormatException e){
+                            System.out.println("Error en el formato de entrada");
+                            continue;
+                            
+                        }
+                    }while(false);
+        
                     break;
                 case 2:
                     System.out.println("Digite el numero del cual quiera la suma de sus digitos");
@@ -51,7 +64,7 @@ public class Main {
                         System.out.println("error al leer la entrada");
                     }
                     catch(NumberFormatException e){
-                     System.out.println("Error en el formato de entrada");
+                    System.out.println("Error en el formato de entrada");
                     }
 
                     break;
@@ -59,9 +72,45 @@ public class Main {
                 case 3:
                     try{
                         System.out.println("Ingrese el limite inferior");
-                        
+                        limiteInferiorPrimos = Integer.parseInt(bufer.readLine());
+
+                        System.out.println("Ingrese el limite superior");
+                        limiteInferiorPrimos = Integer.parseInt(bufer.readLine());
                     }
+                    catch(IOException e){
+                        System.out.println("error al leer la entrada");
+                    }
+                    catch(NumberFormatException e){
+                    System.out.println("Error en el formato de entrada");
+                    }
+                    break;
+                case 4:
+                    do{
+                        try{
+                            System.out.println("Ingrese un numero");
+                            mayorMenor = Double.parseDouble(bufer.readLine());
+                        }
+                        catch(IOException e){
+                        System.out.println("error al leer la entrada");
+                        
+                        }
+                        catch(NumberFormatException e){
+                        System.out.println("Error en el formato de entrada");
+                        }
+
+                        if(mayorMenor < 0){
+                            break;
+                        }
+                        break;
+
+                    }while(true);
+
+                default:
+                    System.out.println("Opcion no valida, por favor intente de nuevo");
             }
+        
+            
+            
 
 
 
