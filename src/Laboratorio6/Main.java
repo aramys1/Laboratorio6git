@@ -85,7 +85,25 @@ public class Main {
                     }
                     break;
                 case 4:
+                     boolean primeraVuelta = false; 
+                     int contador = 0;
+                     Problema4 objeto4;
+
+                    try{
+                        System.out.println("Ingrese un numero");
+                        mayorMenor = Double.parseDouble(bufer.readLine());
+                    }
+                    catch(IOException e){
+                    System.out.println("error al leer la entrada");
+                    
+                    }
+                    catch(NumberFormatException e){
+                    System.out.println("Error en el formato de entrada");
+                    }
+                    objeto4 = new Problema4(mayorMenor);
+
                     do{
+                        
                         try{
                             System.out.println("Ingrese un numero");
                             mayorMenor = Double.parseDouble(bufer.readLine());
@@ -98,12 +116,21 @@ public class Main {
                         System.out.println("Error en el formato de entrada");
                         }
 
+
+
                         if(mayorMenor < 0){
+                            System.out.println("El numero mayor de la serie es:" + objeto4.getNumeroMayor());
                             break;
                         }
-                        break;
-
+                        else{
+                            objeto4.setNumeroIngresado(mayorMenor);
+                            objeto4.encontrarNumeroMayor(mayorMenor);
+                        }
+                        
+                        
+                        
                     }while(true);
+                    break;
 
                 default:
                     System.out.println("Opcion no valida, por favor intente de nuevo");
