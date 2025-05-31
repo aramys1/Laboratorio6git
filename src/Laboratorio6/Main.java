@@ -40,7 +40,8 @@ public class Main {
                          System.out.println("Digite el numero al que desea calcular el factorial: ");
                         try{
                             factorial = Integer.parseInt(bufer.readLine());
-
+                            factorial facto = new factorial (factorial);
+                            System.out.println("El numero factorial de"+ factorial + "es" + facto.calcular());
                         }
                         catch(IOException e){
                             System.out.println("error al leer la entrada");
