@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
+//comentario de prueba
 public class Main {
     public static void main(String[] args) {
         
@@ -43,12 +44,12 @@ public class Main {
                         }
                         catch(IOException e){
                             System.out.println("error al leer la entrada");
-                            continue;
+                            
                             
                         }
                         catch(NumberFormatException e){
                             System.out.println("Error en el formato de entrada");
-                            continue;
+                            
                             
                         }
                     }while(false);
@@ -85,9 +86,8 @@ public class Main {
                     }
                     break;
                 case 4:
-                     boolean primeraVuelta = false; 
-                     int contador = 0;
-                     Problema4 objeto4;
+                
+                     problema4 objeto4;
 
                     try{
                         System.out.println("Ingrese un numero");
@@ -100,7 +100,7 @@ public class Main {
                     catch(NumberFormatException e){
                     System.out.println("Error en el formato de entrada");
                     }
-                    objeto4 = new Problema4(mayorMenor);
+                    objeto4 = new problema4(mayorMenor);
 
                     do{
                         
@@ -133,7 +133,13 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Opcion no valida, por favor intente de nuevo");
+                    if(opcionesMenu ==0){
+                        break;
+                    }
+                    else{
+                        System.out.println("Opcion no valida, por favor intente de nuevo");
+                    }
+                    
             }
         
             

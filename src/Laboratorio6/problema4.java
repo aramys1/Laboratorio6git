@@ -1,12 +1,12 @@
 package Laboratorio6;
 
-public class Problema4 {
+public class problema4 {
     private double numeroIngresado;
     private double numeroMayor = 0;
     private double numeroMenor = 0;
 
 
-    public Problema4(double numeroIngresado) {
+    public problema4(double numeroIngresado) {
         this.numeroIngresado = numeroIngresado;
         encontrarNumeroMayor(numeroIngresado);
     }
