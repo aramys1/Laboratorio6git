@@ -20,7 +20,7 @@ public class Main {
         do{
             try{
             System.out.println("Que problema desea realizar?");
-            System.out.println("1. Calcular el factorial de un numero \n2. Calcular la suma de los divisores de un numero\n3. Calcular la cantidad de numeros primos que hay entre dos numeros \n4. Encontrar el numero mas grande de una serie de numeros ingresados por el usuario \n0. Salir");
+            System.out.println("1. Calcular el factorial de un numero \n2. Calcular la suma de los digitos de un numero\n3. Calcular la cantidad de numeros primos que hay entre dos numeros \n4. Encontrar el numero mas grande de una serie de numeros ingresados por el usuario \n0. Salir");
             opcionesMenu = Integer.parseInt(bufer.readLine());
 
             }catch(IOException e){
@@ -66,7 +66,7 @@ public class Main {
                 case 2:
                     System.out.println("Digite el numero del cual quiera la suma de sus digitos");
                     try{
-                        sumaDigitos = Integer.parseInt(bufer.readLine());
+                        sumaDigitos = Long.parseLong(bufer.readLine());
                         if ( sumaDigitos < 0) {
                             System.out.println("No se puede calcular numeros negativos");
                         }else{
@@ -89,7 +89,7 @@ public class Main {
                         System.out.print("\nIngrese el límite inferior (mayor o igual que 2):");
                         limiteInferiorPrimos = Long.parseLong(bufer.readLine());
 
-                        System.out.print("Ingrese el límite superior (mayor que el inferior, menor de 100000):");
+                        System.out.print("Ingrese el límite superior (mayor que el inferior):");
                         limiteSuperiorPrimos = Long.parseLong(bufer.readLine());
 
                         if (limiteInferiorPrimos < 2) {
