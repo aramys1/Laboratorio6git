@@ -12,8 +12,8 @@ public class Main {
         int opcionesMenu = 0;
         int factorial = 0;
         long sumaDigitos = 0;
-        int limiteInferiorPrimos = 0;
-        int limiteSuperiorPrimos = 0;
+        long limiteInferiorPrimos = 0;
+        long limiteSuperiorPrimos = 0;
         double mayorMenor = 0;
         boolean bucleDeErrores = false;
 
@@ -95,8 +95,6 @@ public class Main {
                             System.out.println("\nEl límite inferior debe ser mayor o igual que 2.\n");
                         } else if (limiteSuperiorPrimos <= limiteInferiorPrimos) {
                             System.out.println("\nEl límite superior debe ser mayor que el límite inferior.\n");
-                        } else if (limiteInferiorPrimos > 100000 || limiteSuperiorPrimos > 100000) {
-                            System.out.println("\nEl límite superior debe ser menor o igual a 100000.\n");
                         } else {
                             problema3 p = new problema3(limiteInferiorPrimos, limiteSuperiorPrimos);
                             p.calcularNumerosPrimos();
