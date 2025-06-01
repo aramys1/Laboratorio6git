@@ -39,8 +39,6 @@ public class Main {
                     do{
                          System.out.println("Digite el numero al que desea calcular el factorial: ");
                         try{
-                            //LA I DEL INTEGER ES EN MAYUSCULA VSC LO HACE POR DEFAULT EN MINUSCULA, EL QUE NO ESCRIBE SU CODIGO ES GAY
-                            System.out.println("aqui estaba el error");
                             factorial = Integer.parseInt(bufer.readLine());
                         }
                         catch(IOException e){
@@ -53,6 +51,9 @@ public class Main {
                             
                             
                         }
+                        problema1 factoria = new problema1(factorial);
+                        factoria.calcular();
+                        System.out.println("El numero factorial de "+ factorial + " es " + factoria.calcular());
                     }while(false);
         
                     break;
