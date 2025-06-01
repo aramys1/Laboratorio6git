@@ -15,7 +15,6 @@ public class Main {
         long limiteInferiorPrimos = 0;
         long limiteSuperiorPrimos = 0;
         double mayorMenor = 0;
-        boolean bucleDeErrores = false;
 
         do{
             try{
@@ -108,7 +107,7 @@ public class Main {
                     }
                     break;
                 case 4:
-                problema4 objeto4 = new problema4();
+                problema4 problema4 = new problema4();
                 do {
                     try {
                         System.out.print("Ingrese un número (negativo para finalizar): ");
@@ -122,10 +121,10 @@ public class Main {
                     }
 
                     if (mayorMenor < 0) {
-                        System.out.println("\nEl número mayor de la serie es: " + objeto4.getNumeroMayor() + "\n");
+                        System.out.println("\nEl número mayor de la serie es: " + problema4.getNumeroMayor() + "\n");
                         break;
                     } else {
-                        objeto4.encontrarNumeroMayor(mayorMenor);
+                        problema4.encontrarNumeroMayor(mayorMenor);
                     }
 
                 } while (true);
