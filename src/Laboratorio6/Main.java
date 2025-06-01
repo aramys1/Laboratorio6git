@@ -24,11 +24,11 @@ public class Main {
             opcionesMenu = Integer.parseInt(bufer.readLine());
 
             }catch(IOException e){
-                System.err.println("\nError al leer la entrada:\n");
+                System.out.println("\nError al leer la entrada:\n");
                 continue;
             }
             catch(NumberFormatException e){
-                System.err.println("\nError en el formato de entrada\n");
+                System.out.println("\nError en el formato de entrada\n");
                 continue; 
             }
 
@@ -41,9 +41,9 @@ public class Main {
                         try{
                             factorial = Integer.parseInt(bufer.readLine());
                             if (factorial < 0){
-                                System.err.println("\nUn numero factorial no puede ser negativo\n");
+                                System.out.println("\nUn numero factorial no puede ser negativo\n");
                             }else if (factorial >= 50){
-                                System.err.println("\nEl numero es demasiado grande, por favor ingrese un numero menor a 50\n");
+                                System.out.println("\nEl numero es demasiado grande, por favor ingrese un numero menor a 50\n");
                             }else {
                                 problema1 factoria = new problema1 (factorial);
                                 factoria.calcular();
@@ -51,12 +51,12 @@ public class Main {
                             }
                         }
                         catch(IOException e){
-                            System.err.println("\nerror al leer la entrada\n");
+                            System.out.println("\nerror al leer la entrada\n");
 
 
                         }
                         catch(NumberFormatException e){
-                            System.err.println("\nError en el formato de entrada\n");
+                            System.out.println("\nError en el formato de entrada\n");
 
 
                         }
@@ -68,7 +68,7 @@ public class Main {
                     try{
                         sumaDigitos = Long.parseLong(bufer.readLine());
                         if ( sumaDigitos < 0) {
-                            System.err.println("\nNo se puede calcular numeros negativos\n");
+                            System.out.println("\nNo se puede calcular numeros negativos\n");
                         }else{
                             problema2 suma = new problema2(sumaDigitos);
                             suma.calcularSuma();
@@ -76,10 +76,10 @@ public class Main {
                         }
                     }
                     catch(IOException e){
-                        System.err.println("\nerror al leer la entrada\n");
+                        System.out.println("\nerror al leer la entrada\n");
                     }
                     catch(NumberFormatException e){
-                        System.err.println("\nError en el formato de entrada\n");
+                        System.out.println("\nError en el formato de entrada\n");
                     }
 
                     break;
@@ -93,18 +93,18 @@ public class Main {
                         limiteSuperiorPrimos = Long.parseLong(bufer.readLine());
 
                         if (limiteInferiorPrimos < 2) {
-                            System.err.println("\nEl límite inferior debe ser mayor o igual que 2.\n");
+                            System.out.println("\nEl límite inferior debe ser mayor o igual que 2.\n");
                         } else if (limiteSuperiorPrimos <= limiteInferiorPrimos) {
-                            System.err.println("\nEl límite superior debe ser mayor que el límite inferior.\n");
+                            System.out.println("\nEl límite superior debe ser mayor que el límite inferior.\n");
                         } else {
                             problema3 p = new problema3(limiteInferiorPrimos, limiteSuperiorPrimos);
                             p.calcularNumerosPrimos();
                         }
 
                     } catch (IOException e) {
-                        System.err.println("\nError al leer la entrada.\n");
+                        System.out.println("\nError al leer la entrada.\n");
                     } catch (NumberFormatException e) {
-                        System.err.println("\nError en el formato de entrada, introduzca un número entero.\n");
+                        System.out.println("\nError en el formato de entrada, introduzca un número entero.\n");
                     }
                     break;
                 case 4:
@@ -114,10 +114,10 @@ public class Main {
                         System.out.print("Ingrese un número (negativo para finalizar): ");
                         mayorMenor = Double.parseDouble(bufer.readLine());
                     } catch (IOException e) {
-                        System.err.println("\nError al leer la entrada.\n");
+                        System.out.println("\nError al leer la entrada.\n");
                         continue;
                     } catch (NumberFormatException e) {
-                        System.err.println("\nError en el formato de entrada.\n");
+                        System.out.println("\nError en el formato de entrada.\n");
                         continue;
                     }
 
@@ -136,7 +136,7 @@ public class Main {
                         break;
                     }
                     else{
-                        System.err.println("\nOpcion no valida, por favor intente de nuevo\n");
+                        System.out.println("\nOpcion no valida, por favor intente de nuevo\n");
                     }
                     
             }
