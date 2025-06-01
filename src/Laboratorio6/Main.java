@@ -74,25 +74,25 @@ public class Main {
                 
                 case 3:
                     try {
-                        System.out.println("Ingrese el límite inferior (mayor o igual que 2):");
+                        System.out.print("\nIngrese el límite inferior (mayor o igual que 2):");
                         limiteInferiorPrimos = Integer.parseInt(bufer.readLine());
 
-                        System.out.println("Ingrese el límite superior (mayor que el inferior):");
+                        System.out.print("Ingrese el límite superior (mayor que el inferior):");
                         limiteSuperiorPrimos = Integer.parseInt(bufer.readLine());
 
                         if (limiteInferiorPrimos < 2) {
-                            System.out.println("El límite inferior debe ser mayor o igual que 2.");
+                            System.out.println("\nEl límite inferior debe ser mayor o igual que 2.\n");
                         } else if (limiteSuperiorPrimos <= limiteInferiorPrimos) {
-                            System.out.println("El límite superior debe ser mayor que el límite inferior.");
+                            System.out.println("\nEl límite superior debe ser mayor que el límite inferior.\n");
                         } else {
-                            Problema3 p = new Problema3(limiteInferiorPrimos, limiteSuperiorPrimos);
+                            problema3 p = new problema3(limiteInferiorPrimos, limiteSuperiorPrimos);
                             p.calcularNumerosPrimos();
                         }
 
                     } catch (IOException e) {
                         System.out.println("Error al leer la entrada.");
                     } catch (NumberFormatException e) {
-                        System.out.println("Error en el formato de entrada.");
+                        System.out.println("Error en el formato de entrada, introduzca un número.");
                     }
                     break;
                 case 4:

@@ -7,7 +7,7 @@ public class problema3 {
     private int limiteInferior;
     private int limiteSuperior;
     private int limiteInferiorImprimir;
-    private int limiteSuperiorOriginal;
+    private int limiteInferiorOriginal;
     private boolean primo;
 
     //Constructor
@@ -30,17 +30,18 @@ public class problema3 {
                 }
             }
             if (primo) {
-                System.out.println(limiteInferiorImprimir);
+                System.out.println("\n"+limiteInferiorImprimir);
                 sumaNumerosPrimos += limiteInferiorImprimir;
                 numerosPrimos++;
             }
         }
         if(numerosPrimos == 0) {
-            System.out.println("No hay numeros primos entre " + limiteInferiorOriginal + " y " + limiteSuperior);
+            System.out.println("\nNo hay numeros primos entre " + limiteInferiorOriginal + " y " + limiteSuperior + "\n");
         } else {
-            System.out.println("Esta es la lista de numeros primos entre " + limiteInferiorOriginal + " y " + limiteSuperior);
-            System.out.println("La suma de los numeros primos es: " + sumaNumerosPrimos);
+            System.out.println("\nEsa es la lista de numeros primos entre " + limiteInferiorOriginal + " y " + limiteSuperior);
             System.out.println("La cantidad de numeros primos es: " + numerosPrimos);
+            System.out.println("La suma de los numeros primos es: " + sumaNumerosPrimos + "\n");
+            
         }
     }
 
