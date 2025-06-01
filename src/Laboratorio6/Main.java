@@ -37,12 +37,13 @@ public class Main {
             switch (opcionesMenu){     
                 case 1:
                     do{
-                        System.out.println("Digite el numero al que desea calcular el factorial: ");
+                        System.out.println("Digite el numero al que desea calcular el factorial (menor a 50): ");
                         try{
                             factorial = Integer.parseInt(bufer.readLine());
                             if (factorial < 0){
                                 System.out.println("Un numero factorial no puede ser negativo");
-
+                            }else if (factorial >= 50){
+                                System.out.println("El numero es demasiado grande, por favor ingrese un numero menor a 50");
                             }else {
                                 problema1 factoria = new problema1 (factorial);
                                 factoria.calcular();
@@ -86,10 +87,10 @@ public class Main {
                 case 3:
                     try {
                         System.out.print("\nIngrese el límite inferior (mayor o igual que 2):");
-                        limiteInferiorPrimos = Integer.parseInt(bufer.readLine());
+                        limiteInferiorPrimos = Long.parseLong(bufer.readLine());
 
                         System.out.print("Ingrese el límite superior (mayor que el inferior, menor de 100000):");
-                        limiteSuperiorPrimos = Integer.parseInt(bufer.readLine());
+                        limiteSuperiorPrimos = Long.parseLong(bufer.readLine());
 
                         if (limiteInferiorPrimos < 2) {
                             System.out.println("\nEl límite inferior debe ser mayor o igual que 2.\n");
