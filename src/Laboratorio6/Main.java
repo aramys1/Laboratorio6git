@@ -37,37 +37,48 @@ public class Main {
             switch (opcionesMenu){     
                 case 1:
                     do{
-                         System.out.println("Digite el numero al que desea calcular el factorial: ");
+                        System.out.println("Digite el numero al que desea calcular el factorial: ");
                         try{
                             factorial = Integer.parseInt(bufer.readLine());
+                            if (factorial < 0){
+                                System.out.println("Un numero factorial no puede ser negativo");
+
+                            }else {
+                                problema1 factoria = new problema1 (factorial);
+                                factoria.calcular();
+                                System.out.println("El numero factorial de "+ factorial + " es " + factoria.calcular());
+                            }
                         }
                         catch(IOException e){
                             System.out.println("error al leer la entrada");
-                            
-                            
+
+
                         }
                         catch(NumberFormatException e){
                             System.out.println("Error en el formato de entrada");
-                            
-                            
+
+
                         }
-                        problema1 factoria = new problema1(factorial);
-                        factoria.calcular();
-                        System.out.println("El numero factorial de "+ factorial + " es " + factoria.calcular());
                     }while(false);
-        
+
                     break;
                 case 2:
                     System.out.println("Digite el numero del cual quiera la suma de sus digitos");
                     try{
                         sumaDigitos = Integer.parseInt(bufer.readLine());
-
+                        if ( sumaDigitos < 0) {
+                            System.out.println("No se puede calcular numeros negativos");
+                        }else{
+                            problema2 suma = new problema2(sumaDigitos);
+                            suma.calcularSuma();
+                            System.out.println("La suma del digito ingresado  "+ sumaDigitos + " es " + suma.calcularSuma());
+                        }
                     }
                     catch(IOException e){
                         System.out.println("error al leer la entrada");
                     }
                     catch(NumberFormatException e){
-                    System.out.println("Error en el formato de entrada");
+                        System.out.println("Error en el formato de entrada");
                     }
 
                     break;
