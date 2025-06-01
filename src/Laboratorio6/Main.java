@@ -108,51 +108,28 @@ public class Main {
                     }
                     break;
                 case 4:
-                
-                     problema4 objeto4;
-
-                    try{
-                        System.out.println("Ingrese un numero");
+                problema4 objeto4 = new problema4();
+                do {
+                    try {
+                        System.out.print("Ingrese un número (negativo para finalizar): ");
                         mayorMenor = Double.parseDouble(bufer.readLine());
+                    } catch (IOException e) {
+                        System.out.println("Error al leer la entrada.");
+                        continue;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Error en el formato de entrada.");
+                        continue;
                     }
-                    catch(IOException e){
-                    System.out.println("error al leer la entrada");
-                    
+
+                    if (mayorMenor < 0) {
+                        System.out.println("El número mayor de la serie es: " + objeto4.getNumeroMayor());
+                        break;
+                    } else {
+                        objeto4.encontrarNumeroMayor(mayorMenor);
                     }
-                    catch(NumberFormatException e){
-                    System.out.println("Error en el formato de entrada");
-                    }
-                    objeto4 = new problema4(mayorMenor);
 
-                    do{
-                        
-                        try{
-                            System.out.println("Ingrese un numero");
-                            mayorMenor = Double.parseDouble(bufer.readLine());
-                        }
-                        catch(IOException e){
-                        System.out.println("error al leer la entrada");
-                        
-                        }
-                        catch(NumberFormatException e){
-                        System.out.println("Error en el formato de entrada");
-                        }
-
-
-
-                        if(mayorMenor < 0){
-                            System.out.println("El numero mayor de la serie es:" + objeto4.getNumeroMayor());
-                            break;
-                        }
-                        else{
-                            objeto4.setNumeroIngresado(mayorMenor);
-                            objeto4.encontrarNumeroMayor(mayorMenor);
-                        }
-                        
-                        
-                        
-                    }while(true);
-                    break;
+                } while (true);
+                break;
 
                 default:
                     if(opcionesMenu ==0){
@@ -163,12 +140,6 @@ public class Main {
                     }
                     
             }
-        
-            
-            
-
-
-
             if(opcionesMenu == 0){
                 break;
             }
